@@ -11,9 +11,12 @@ const Tooltip = ({ text, top, left, stepLink }) => {
     };
 
     return (
-        <div style={tooltipStyles} className="tooltip">
-            <p>{text}</p>
-            <Link href={stepLink}>NEXT</Link> {/* Ensure 'a' tag is used inside 'Link' */}
+        <div className='tooltip-ctrl'>
+            <div className='overlay'></div>
+            <div style={tooltipStyles} className="tooltip">
+                <p>{text}</p>
+                <Link href={stepLink}>NEXT</Link> {/* Ensure 'a' tag is used inside 'Link' */}
+            </div>
         </div>
     );
 };

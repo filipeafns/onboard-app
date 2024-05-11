@@ -1,6 +1,91 @@
-body {
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* CSS Reset - Normalize browser styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: Arial, sans-serif; /* Set a base font */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevent inline spacing */
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, button, textarea, select {
+  font: inherit; /* Inherit font-family and size from parent */
+}
+
+.shot-container {
+  position: relative;
+  height: 100vh;
+  padding: 24px;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  color: #fff;
+  padding: 24px;
+  z-index: 1;
+  transform: translateX(-180px);
+  transition: .2s all ease;
+}
+
+.navigation:hover {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+
+.hotspot {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hotspot img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #757575;
   overflow: hidden;
 }
 
@@ -10,4 +95,26 @@ body {
   border: 1px solid black;
   padding: 24px;
   width: 180px;
+}
+
+.overlay {
+  position: absolute;
+  top: -100vw;
+  left: -100vw;
+  background-color: rgba(0, 0, 0, 0.302);
+  width: 200vw;
+  height: 200vh;
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.2s ease; 
+}
+
+.tooltip-ctrl {
+  transition: .2s all ease;
+}
+
+.tooltip-ctrl:hover .overlay {
+  opacity: 1;
+  visibility: visible;
 }

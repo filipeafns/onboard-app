@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
-import Link from "next/link";
+import Navigation from "./Components/Tooltip/navigation";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-     <Link href="/01-test/step1">go to 01</Link>
+    <main>
+      <Navigation />
     </main>
   );
 }
