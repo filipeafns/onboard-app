@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Tooltip = ({ text, top, left, direction, backLink, nextLink }) => {
+const Tooltip = ({ title, text, top, left, direction, backLink, nextLink }) => {
   const tooltipStyles = {
     top: `${top}%`,
     left: `${left}%`,
@@ -15,6 +15,7 @@ const Tooltip = ({ text, top, left, direction, backLink, nextLink }) => {
     <div className="tooltip-ctrl">
       <div className="overlay"></div>
       <div style={tooltipStyles} className={`tooltip ${directionClass}`}>
+        <h3>{title}</h3>
         <p>{text}</p>
         <div className="button-group">
           <Link className="button-link" href={backLink}>Back</Link>
@@ -27,6 +28,7 @@ const Tooltip = ({ text, top, left, direction, backLink, nextLink }) => {
 
 // Provide default props
 Tooltip.defaultProps = {
+  title: "Default Title",
   text: "Default Tooltip Text",
   top: 20,
   left: 20,
