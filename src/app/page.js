@@ -3,7 +3,7 @@ import Navigation from "./Components/Tooltip/navigation";
 
 export default function Home() {
   return (
-    <main>
+    <main className="home">
       <Navigation />
       <h1>Explore apps</h1>
       <ul>

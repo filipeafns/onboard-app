@@ -19,6 +19,7 @@ html, body {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   font-family: Arial, sans-serif; /* Set a base font */
+  background-color: #000;
 }
 
 img {
@@ -85,7 +86,7 @@ input, button, textarea, select {
 .hotspot img {
   width: 100%;
   border-radius: 12px;
-  border: 1px solid #757575;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
 }
 
@@ -100,6 +101,7 @@ input, button, textarea, select {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   gap: 16px;
+  animation: moveIn .4s ease-out forwards;
 }
 
 .tooltip::after {
@@ -168,7 +170,7 @@ input, button, textarea, select {
 }
 
 .tooltip-ctrl {
-  transition: .2s all ease;
+  transition: 1.2s all ease;
 }
 
 .tooltip-ctrl:hover .overlay {
@@ -178,4 +180,18 @@ input, button, textarea, select {
 
 .overlay:hover {
   display: none;
+}
+
+.home {
+  color: #fff;
+}
+
+
+@keyframes moveIn {
+  0% {
+    transform: translateX(-30px); /* Start 100px to the left */
+  }
+  100% {
+    transform: translateX(0); /* Slide to the original position */
+  }
 }
