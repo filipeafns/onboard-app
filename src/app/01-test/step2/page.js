@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <Link href="/">go back home</Link>
-      <Tooltip text="This is a custom tooltip!" top={70} left={30} stepLink="/01-test/step2" />
+      <Tooltip text="This is a custom tooltip!" top={10} left={50} stepLink="/01-test/step1" />
       <Image
         src="/1.png"
         width={1440}
