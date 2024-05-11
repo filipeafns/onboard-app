@@ -91,19 +91,76 @@ input, button, textarea, select {
 
 .tooltip {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 24px;
-  width: 180px;
+  width: 280px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  gap: 16px;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  border-width: 8px;
+  border-style: solid;
+}
+
+.tooltip-bottom::after {
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip-left::after {
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-color: transparent #fff transparent transparent;
+}
+
+.tooltip-top::after {
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: transparent transparent #fff transparent;
+}
+
+.tooltip-right::after {
+  right: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-color: transparent transparent transparent #fff;
+}
+
+.button-group {
+  display: flex;
+  gap: 4px;
+}
+
+.button-link { 
+  padding: 4px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all .2s ease; 
+}
+
+.button-link:hover { 
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .overlay {
   position: absolute;
   top: -100vw;
   left: -100vw;
-  background-color: rgba(0, 0, 0, 0.302);
-  width: 200vw;
-  height: 200vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 400vw;
+  height: 400vh;
   content: "";
   opacity: 0;
   visibility: hidden;
@@ -117,4 +174,8 @@ input, button, textarea, select {
 .tooltip-ctrl:hover .overlay {
   opacity: 1;
   visibility: visible;
+}
+
+.overlay:hover {
+  display: none;
 }

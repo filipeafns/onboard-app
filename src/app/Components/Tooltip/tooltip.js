@@ -2,31 +2,37 @@
 import React from 'react';
 import Link from 'next/link';
 
-// Accept props in the component function
-const Tooltip = ({ text, top, left, stepLink }) => {
-    // Set dynamic inline styles based on the passed props
-    const tooltipStyles = {
-        top: `${top}%`, // Convert numbers to percentage strings
-        left: `${left}%`,
-    };
+const Tooltip = ({ text, top, left, direction, backLink, nextLink }) => {
+  const tooltipStyles = {
+    top: `${top}%`,
+    left: `${left}%`,
+  };
 
-    return (
-        <div className='tooltip-ctrl'>
-            <div className='overlay'></div>
-            <div style={tooltipStyles} className="tooltip">
-                <p>{text}</p>
-                <Link href={stepLink}>NEXT</Link> {/* Ensure 'a' tag is used inside 'Link' */}
-            </div>
+  // Determine the direction class based on the `direction` prop
+  const directionClass = direction ? `tooltip-${direction}` : '';
+
+  return (
+    <div className="tooltip-ctrl">
+      <div className="overlay"></div>
+      <div style={tooltipStyles} className={`tooltip ${directionClass}`}>
+        <p>{text}</p>
+        <div className="button-group">
+          <Link className="button-link" href={backLink}>Back</Link>
+          <Link className="button-link" href={nextLink}>Next</Link>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
-// Provide default props if they aren't provided by the parent component
+// Provide default props
 Tooltip.defaultProps = {
-    text: "Default Tooltip Text",
-    top: 20, // Default to 20% if not provided
-    left: 20, // Default to 20% if not provided
-    stepLink: "/" // Default link, can be set to homepage or any other
+  text: "Default Tooltip Text",
+  top: 20,
+  left: 20,
+  direction: "left",
+  backLink: "/",
+  nextLink: "/"
 };
 
 export default Tooltip;

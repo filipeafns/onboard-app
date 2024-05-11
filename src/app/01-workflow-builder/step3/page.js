@@ -9,8 +9,8 @@ export default function Home() {
       <div className="shot-container">
         <Navigation />
         <div className="hotspot">
-          <Tooltip text="This is a custom tooltip!" top={10} left={50} backLink="/01-workflow-builder/step1" nextLink="/01-workflow-builder/step3" direction="left" />
-          <img src="/test.png" />
+        <Tooltip text="What's going on here on step 3?" top={75} left={40} backLink="/01-workflow-builder/step2" nextLink="/01-workflow-builder/step1" direction="left" />
+          <img src="/test2.png"/>
         </div>
       </div>
     </main>

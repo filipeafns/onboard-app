@@ -5,6 +5,11 @@ export default function Home() {
   return (
     <main>
       <Navigation />
+      <h1>Explore apps</h1>
+      <ul>
+        <li>Workflow Builder</li>
+        <li>Logging</li>
+      </ul>
     </main>
   );
 }
