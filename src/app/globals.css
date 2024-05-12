@@ -21,6 +21,8 @@ html, body {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   font-family: "Inter", sans-serif;
+  background-image: url("/bg.svg");
+  background-repeat: repeat;
   background-color: #000;
 }
 
@@ -97,13 +99,15 @@ header a:hover {
   flex-direction: column;
   width: 250px;
   height: 100%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(40px);
   opacity: 0;
   color: #fff;
   padding: 16px;
   z-index: 1;
   transform: translateX(-210px);
   transition: .2s all ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navigation li {
@@ -159,11 +163,27 @@ header a:hover {
   border-style: solid;
 }
 
+.tooltip::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  animation: pulse 2s cubic-bezier(0, 0.62, 0, 0.74) infinite;
+}
+
 .tooltip-bottom::after {
   bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
   border-color: #141313 transparent transparent transparent;
+}
+
+.tooltip-bottom::before {
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
 }
 
 .tooltip-left::after {
@@ -173,11 +193,22 @@ header a:hover {
   border-color: transparent #141313 transparent transparent;
 }
 
+.tooltip-left::before {
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+}
+
 .tooltip-top::after {
   top: -16px;
   left: 50%;
   transform: translateX(-50%);
   border-color: transparent transparent #141313 transparent;
+}
+.tooltip-top::before {
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
 }
 
 .tooltip-right::after {
@@ -185,6 +216,11 @@ header a:hover {
   top: 50%;
   transform: translateY(-50%);
   border-color: transparent transparent transparent #141313;
+}
+.tooltip-right::before {
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
 }
 
 .button-group {
@@ -232,18 +268,20 @@ header a:hover {
 
 .home {
   color: #fff;
+  padding: 5rem;
 }
 
 .card a {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(9, 9, 9);
   padding: 16px;;
   gap: 16px;
   width: 300px;
   height: 320px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all .2s ease-out;
+  border-radius: 8px;
 }
 
 .card p {
@@ -272,5 +310,14 @@ header a:hover {
   }
   100% {
     transform: translateX(0); /* Slide to the original position */
+  }
+
+}
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(0);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
   }
 }
