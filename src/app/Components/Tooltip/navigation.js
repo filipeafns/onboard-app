@@ -9,10 +9,16 @@ const Navigation = () => {
                 <Link href="/">Home</Link>
             </li>
             <li>
-                <Link href="01-workflow-builder/step1">Workflow Builder</Link>
+                <Link href="01-workflow-builder/step1">Getting Started</Link>
             </li>
             <li>
-                <Link href="#">Logging</Link>
+                <Link href="#">Authentication</Link>
+            </li>
+            <li>
+                <Link href="#">Building Workflows</Link>
+            </li>
+            <li>
+                <Link href="#">Alloy Modal</Link>
             </li>
         </ul>
     );

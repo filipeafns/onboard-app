@@ -12,13 +12,15 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 html, body {
   width: 100%;
   height: 100%;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  font-family: Arial, sans-serif; /* Set a base font */
+  font-family: "Inter", sans-serif;
   background-color: #000;
 }
 
@@ -46,10 +48,45 @@ input, button, textarea, select {
   font: inherit; /* Inherit font-family and size from parent */
 }
 
+main { 
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 4px 18px 4px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+header div {
+  padding: 8px 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header div:first-of-type {
+  border-radius: 16px 0 0 16px;
+}
+
+header div:last-of-type {
+  border: 0;
+}
+
+header a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
 .shot-container {
   position: relative;
   height: 100vh;
-  padding: 24px;
 }
 
 .navigation {
@@ -58,15 +95,24 @@ input, button, textarea, select {
   left: 0;
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 250px;
   height: 100%;
   background-color: #000;
   opacity: 0;
   color: #fff;
-  padding: 24px;
+  padding: 16px;
   z-index: 1;
-  transform: translateX(-180px);
+  transform: translateX(-210px);
   transition: .2s all ease;
+}
+
+.navigation li {
+  padding: 16px 8px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.navigation li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .navigation:hover {
@@ -94,13 +140,15 @@ input, button, textarea, select {
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 24px;
+  font-size: 14px;
+  background-color: #141313;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px;
   width: 280px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   gap: 16px;
+  color: #eaeaea;
   animation: moveIn .4s cubic-bezier(0, 0.66, 0, 0.88) forwards;
 }
 
@@ -115,28 +163,28 @@ input, button, textarea, select {
   bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
-  border-color: #fff transparent transparent transparent;
+  border-color: #141313 transparent transparent transparent;
 }
 
 .tooltip-left::after {
   left: -16px;
   top: 50%;
   transform: translateY(-50%);
-  border-color: transparent #fff transparent transparent;
+  border-color: transparent #141313 transparent transparent;
 }
 
 .tooltip-top::after {
   top: -16px;
   left: 50%;
   transform: translateX(-50%);
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent #141313 transparent;
 }
 
 .tooltip-right::after {
   right: -16px;
   top: 50%;
   transform: translateY(-50%);
-  border-color: transparent transparent transparent #fff;
+  border-color: transparent transparent transparent #141313;
 }
 
 .button-group {
@@ -146,14 +194,14 @@ input, button, textarea, select {
 
 .button-link { 
   padding: 4px 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.1);
   transition: all .2s ease; 
 }
 
 .button-link:hover { 
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .overlay {
@@ -184,6 +232,37 @@ input, button, textarea, select {
 
 .home {
   color: #fff;
+}
+
+.card a {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 16px;;
+  gap: 16px;
+  width: 300px;
+  height: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all .2s ease-out;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4rem;
+}
+.card img {
+  border-radius: 2px;
+}
+
+.card a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(2px);
+}
+
+.guide-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 
