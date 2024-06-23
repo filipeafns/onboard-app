@@ -11,9 +11,9 @@ export default function Home() {
         <li>
           <Card
             Link="/01-workflow-builder/step1"
-            Title="Getting Started"
+            Title="Creating your first workflow"
             Description="In this guide, we'll walk through how to get started building integrations with Alloy Embedded."
-            Image="test.png" />
+            Image="/workflows/create/wf-new1.png" />
         </li>
         <li>
           <Card

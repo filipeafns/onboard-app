@@ -148,12 +148,51 @@ header a:hover {
   background-color: #141313;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 16px;
-  width: 280px;
+  min-width: 20%;
+  max-width: 30%;
+  min-height: 25%;
+  max-height: 30%;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   gap: 16px;
   color: #eaeaea;
   animation: moveIn .4s cubic-bezier(0, 0.66, 0, 0.88) forwards;
+}
+
+/* Styles for viewports up to 600px */
+@media (max-width: 600px) {
+  .tooltip {
+    font-size: 10px;
+    padding: 12px;
+    min-width: 50%;
+    max-width: 80%;
+    min-height: 20%;
+    max-height: 25%;
+  }
+}
+
+/* Styles for viewports from 601px to 1000px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .tooltip {
+    font-size: 14px;
+    padding: 14px;
+    min-width: 30%;
+    max-width: 40%;
+    min-height: 30%;
+    max-height: 40%;
+  }
+}
+
+/* Styles for viewports from 1001px to 1280px */
+@media (min-width: 901px) and (max-width: 1920px) {
+  .tooltip {
+    font-size: 14px;
+    padding: 16px;
+    min-width: 10%%;
+    max-width: 15%;
+    min-height: 15%;
+    max-height: 25%;
+  }
 }
 
 .tooltip::after {
@@ -175,51 +214,51 @@ header a:hover {
 
 .tooltip-bottom::after {
   bottom: -16px;
-  left: 50%;
+  left: 40px;
   transform: translateX(-50%);
   border-color: #141313 transparent transparent transparent;
 }
 
 .tooltip-bottom::before {
   bottom: -40px;
-  left: 50%;
+  left: 40px;
   transform: translateX(-50%) scale(0);
 }
 
 .tooltip-left::after {
   left: -16px;
-  top: 50%;
+  top: 40px;
   transform: translateY(-50%);
   border-color: transparent #141313 transparent transparent;
 }
 
 .tooltip-left::before {
-  left: -50px;
-  top: 50%;
+  left: -40px;
+  top: 40px;
   transform: translateY(-50%) scale(0);
 }
 
 .tooltip-top::after {
   top: -16px;
-  left: 50%;
+  left: 40px;
   transform: translateX(-50%);
   border-color: transparent transparent #141313 transparent;
 }
 .tooltip-top::before {
   top: -40px;
-  left: 50%;
+  left: 40px;
   transform: translateX(-50%) scale(0);
 }
 
 .tooltip-right::after {
   right: -16px;
-  top: 50%;
+  top: 40px;
   transform: translateY(-50%);
   border-color: transparent transparent transparent #141313;
 }
 .tooltip-right::before {
   right: -50px;
-  top: 50%;
+  top: 40px;
   transform: translateY(-50%) scale(0);
 }
 

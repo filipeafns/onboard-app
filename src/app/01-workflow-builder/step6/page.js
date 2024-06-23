@@ -5,12 +5,12 @@ import Header from "@/app/Components/header";
 export default function Home() {
   return (
     <main>
-      <Header Description="Create a worflow" />
+      <Header Description="Trigger Event" />
       <Navigation />
       <div className="shot-container">
         <div className="hotspot">
-          <Tooltip title="Step 3" text="Click New Workflow to start building your first workflow" top={10} left={64} backLink="/01-workflow-builder/step2" nextLink="/01-workflow-builder/step4" direction="right" />
-          <img src="/workflows/create/wf-new3.png" />
+          <Tooltip title="Step 6" text="Select a trigger event" top={44} left={20} backLink="/01-workflow-builder/step5" nextLink="/01-workflow-builder/step7" direction="left" />
+          <img src="/workflows/create/wf-new6.png" />
         </div>
       </div>
     </main>
