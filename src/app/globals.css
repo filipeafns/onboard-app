@@ -197,6 +197,7 @@ header a:hover {
 
 .tooltip p {
   font-size: 1vw;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -239,7 +240,7 @@ header a:hover {
 
 .tooltip-left::before {
   left: -40px;
-  top: 40px;
+  top: 30px;
   transform: translateY(-50%) scale(0);
 }
 
@@ -263,7 +264,7 @@ header a:hover {
 }
 .tooltip-right::before {
   right: -50px;
-  top: 40px;
+  top: 30px;
   transform: translateY(-50%) scale(0);
 }
 
@@ -319,7 +320,7 @@ header a:hover {
   display: flex;
   flex-direction: column;
   background-color: rgb(9, 9, 9);
-  padding: 16px;;
+  padding: 14px;;
   gap: 16px;
   width: 300px;
   height: 320px;
@@ -334,6 +335,7 @@ header a:hover {
 }
 .card img {
   border-radius: 2px;
+  max-height: 180px;
 }
 
 .card a:hover {
