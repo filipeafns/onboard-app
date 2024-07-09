@@ -179,7 +179,7 @@ header a:hover {
     min-width: 30%;
     max-width: 40%;
     min-height: 30%;
-    max-height: 40%;
+    max-height: 45%;
   }
 }
 
@@ -191,8 +191,13 @@ header a:hover {
     min-width: 10%%;
     max-width: 15%;
     min-height: 15%;
-    max-height: 25%;
+    max-height: 30%;
   }
+}
+
+.tooltip p {
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .tooltip::after {
