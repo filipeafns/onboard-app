@@ -10,31 +10,10 @@ export default function Home() {
       <ul className="guide-grid">
         <li>
           <Card
-            Link="/01-workflow-builder/step1"
-            Title="Creating your first workflow"
-            Description="In this guide, we'll walk through how to get started building integrations with Alloy Embedded."
-            Image="/workflows/create/wf-new1.png" />
-        </li>
-        <li>
-          <Card
-            Link="/01-workflow-builder/step1"
-            Title="Authentication"
-            Description="Learn how to connect to Alloy's Embedded iPaaS and make requests."
-            Image="test.png" />
-        </li>
-        <li>
-          <Card
-            Link="/01-workflow-builder/step1"
-            Title="Building Workflows"
-            Description="Learn how to navigate the Alloy Workflow Builder like a pro."
-            Image="test.png" />
-        </li>
-        <li>
-          <Card
-            Link="/01-workflow-builder/step1"
-            Title="Alloy Modal"
-            Description="Learn what the Alloy Modal is and how it helps abstract integration-specific authentication."
-            Image="test.png" />
+            Link="/01-workflow-basics/step1"
+            Title="Workflow Builder"
+            Description="Learn the basics on how to navigate the Workflow Builder"
+            Image="/workflow-basics/wf-basics-1.png" />
         </li>
       </ul>
     </main>

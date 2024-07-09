@@ -9,17 +9,9 @@ const Navigation = () => {
                 <Link href="/">Home</Link>
             </li>
             <li>
-                <Link href="01-workflow-builder/step1">Getting Started</Link>
+                <Link href="/01-workflow-basics/step1">Workflow Builder</Link>
             </li>
-            <li>
-                <Link href="#">Authentication</Link>
-            </li>
-            <li>
-                <Link href="#">Building Workflows</Link>
-            </li>
-            <li>
-                <Link href="#">Alloy Modal</Link>
-            </li>
+
         </ul>
     );
 };
